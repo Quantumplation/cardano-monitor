@@ -1,0 +1,87 @@
+{
+  "APIRateLimit": "00:00:10",
+  "CurrentBalances": {
+    "BTC": 0.0995
+  },
+  "Monitors": [
+    {
+      "Type": "Price",
+      "Market": "ADA, USDT",
+      "Currency": "ADA",
+      "Comparison": "GreaterThan",
+      "Threshold": 1,
+      "Notifications": [
+        "Console",
+        "Beep"
+      ]
+    },
+    {
+      "Type": "Price",
+      "Market": "ADA, USDT",
+      "Currency": "ADA",
+      "Comparison": "LessThan",
+      "Threshold": 0.6,
+      "Notifications": [
+        "Console",
+        "Beep"
+      ]
+    },
+    {
+      "Type": "Price",
+      "Market": "ADA, BTC",
+      "Currency": "ADA",
+      "Comparison": "GreaterThan",
+      "Threshold": 0.0000995,
+      "Notifications": []
+    },
+    {
+      "Type": "Price",
+      "Market": "ADA, BTC",
+      "Currency": "ADA",
+      "Comparison": "LessThan",
+      "Threshold": 0.00004975,
+      "Notifications": []
+    },
+    {
+      "Type": "Balance",
+      "Threshold": 2000.0,
+      "SourceCurrency": "BTC",
+      "DestinationCurrency": "ADA",
+      "Comparison": "GreaterThan",
+      "Notifications": [
+        "Console",
+        "Beep",
+        "Email"
+      ]
+    },
+    {
+      "Type": "RelativePrice",
+      "Market": "ADA, BTC",
+      "Currency": "ADA",
+      "Timespan": "00:30:00",
+      "Percentage": 0.1,
+      "Notifications": [
+        "Console",
+        "Beep",
+        "Email"
+      ]
+    }
+  ],
+  "Notifications": {
+    "Console": {
+      "Type": "Console",
+      "RateLimitType": "PerSource",
+      "RateLimit": "00:00:05"
+    },
+    "Beep": {
+      "Type": "Beep",
+      "RateLimitType": "Global",
+      "RateLimit": "00:00:01"
+    },
+    "Email": {
+      "Type": "Email",
+      "RateLimitType": "Global",
+      "RateLimit": "05:00:00"
+    }
+  }
+}
